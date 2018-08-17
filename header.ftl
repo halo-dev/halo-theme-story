@@ -1,3 +1,4 @@
+<#include "../../common/macro/common_macro.ftl">
 <#if options.story_general_locale?default('en') == 'en'>
     <#setting locale="en">
 </#if>
@@ -16,9 +17,7 @@
     <link type="text/css" rel="stylesheet" href="/story/assert/css/prism.css">
     <link type="text/css" rel="stylesheet" href="/story/assert/css/zoom.css">
     <link type="text/css" rel="stylesheet" href="/story/assert/css/main.css">
-    <#if options.story_general_favicon??>
-    <link rel="shortcut icon" href="${options.story_general_favicon}" type="image/x-icon" />
-    </#if>
+    <@favicon></@favicon>
 
     <!--[if lt IE 9]>
     <script src="//cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>

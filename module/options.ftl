@@ -64,18 +64,6 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="storyGeneralFavicon" class="col-sm-4 control-label">Favicon：</label>
-                                    <div class="col-sm-8">
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" id="storyGeneralFavicon" name="story_general_favicon" value="${options.story_general_favicon?if_exists}" >
-                                            <span class="input-group-btn">
-                                                <button class="btn btn-default btn-flat" type="button" onclick="openAttach('storyGeneralFavicon')">选择</button>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
                                     <label for="storyGeneralLocale" class="col-sm-4 control-label">日期显示中/英文：</label>
                                     <div class="col-sm-8">
                                         <label class="radio-inline">

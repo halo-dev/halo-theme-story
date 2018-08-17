@@ -1,4 +1,5 @@
 </div><!-- end #body -->
+<#include "../../common/macro/common_macro.ftl">
 <#assign current="${.now}">
 <footer id="footer" role="contentinfo">
     <div class="container-fluid">
@@ -7,10 +8,13 @@
             &copy; ${current?substring(0,4)} <a href="${options.blog_url?default('#')}">${options.blog_title?default('Story')}</a>.
             Using <a target="_blank" href="https://github.com/ruibaby/halo">Halo</a> & <a target="_blank" href="https://yumoe.com/">Story</a>.
         </div>
+        <div class="col-12">
+            <@footer_info></@footer_info>
+            <@statistics></@statistics>
+        </div>
         </div>
     </div>
 </footer>
-
 <script src="//lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="/story/assert/js/prism.js"></script>
 <script src="/story/assert/js/zoom-vanilla.min.js"></script>

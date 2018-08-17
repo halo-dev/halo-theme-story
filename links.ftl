@@ -4,16 +4,18 @@
     <div class="row">
         <div id="main" class="col-12 clearfix" role="main">
             <article class="posti" itemscope itemtype="http://schema.org/BlogPosting">
-                <h3>Links</h3>
-                <div class="post-tags">
+                <h1 style="text-align:right;" class="post-title" itemprop="name headline">Links</h1>
+                <div class="post-content" itemprop="articleBody">
                     <ul>
-                    <@commonTag method="links">
-                        <#if links?size gt 0>
-                            <#list links as link>
-                                <li rel="tag"><a target="_blank" href="${link.linkUrl}">${link.linkName}</a></li>
-                            </#list>
-                        </#if>
-                    </@commonTag>
+                        <@commonTag method="links">
+                            <#if links?size gt 0>
+                                <#list links as link>
+                                    <li>
+                                        <a target="_blank" href="${link.linkUrl}">${link.linkName}</a>
+                                    </li>
+                                </#list>
+                            </#if>
+                        </@commonTag>
                     </ul>
                 </div>
             </article>
