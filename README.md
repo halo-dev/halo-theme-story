@@ -20,9 +20,11 @@
 
 ## 注意
 
-该主题能渲染`首页(/)`，`文章页(/archives/${postUrl})`，`标签页(/tags)`，`分类目录(/categories)`，`归档(/archives)`，`友情链接(/links)`，`自定义页面(/p/${postUrl})`。
+该主题能渲染`首页(/)`，`文章页(/archives/${postUrl})`，`归档(/archives)`，`友情链接(/links)`，`自定义页面(/p/${postUrl})`。
 
 ## 使用方法
 
-克隆或者[下载](https://github.com/ruibaby/story-halo/releases)，将文件夹名改为`story`，压缩为zip压缩包之后在后台的主题设置直接上传即可使用。
+1. 克隆或者[下载](https://github.com/ruibaby/story-halo/releases)。
+2. 将文件夹名改为`story`，将文件夹名改为`story`,将文件夹名改为`story`！！！
+3. 压缩为zip压缩包之后在后台的主题设置直接上传即可使用。
 
