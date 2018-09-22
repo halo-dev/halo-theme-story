@@ -14,9 +14,9 @@
 
     <!-- 使用url函数转换相关路径 -->
     <link type="text/css" rel="stylesheet" href="//lib.baomitu.com/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
-    <link type="text/css" rel="stylesheet" href="/story/assert/css/prism.css">
-    <link type="text/css" rel="stylesheet" href="/story/assert/css/zoom.css">
-    <link type="text/css" rel="stylesheet" href="/story/assert/css/main.css">
+    <link type="text/css" rel="stylesheet" href="/${themeName}/assert/css/prism.css">
+    <link type="text/css" rel="stylesheet" href="/${themeName}/assert/css/zoom.css">
+    <link type="text/css" rel="stylesheet" href="/${themeName}/assert/css/main.css">
     <@favicon></@favicon>
 
     <!--[if lt IE 9]>

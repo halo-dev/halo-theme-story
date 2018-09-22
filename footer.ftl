@@ -16,8 +16,8 @@
     </div>
 </footer>
 <script src="//lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script>
-<script src="/story/assert/js/prism.js"></script>
-<script src="/story/assert/js/zoom-vanilla.min.js"></script>
+<script src="/${themeName}/assert/js/prism.js"></script>
+<script src="/${themeName}/assert/js/zoom-vanilla.min.js"></script>
 <script>
     window.onload=function(){
         if (window.location.hash!='') {
