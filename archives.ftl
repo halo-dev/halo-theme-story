@@ -18,7 +18,7 @@
                     <@commonTag method="categories">
                         <#if categories?size gt 0>
                             <#list categories as cate>
-                                <li rel="tag"><a href="/categories/${cate.cateUrl}/">${cate.cateName}</a></li>
+                                <li rel="tag"><a href="${options.blog_url!}/categories/${cate.cateUrl}/">${cate.cateName}</a></li>
                             </#list>
                         </#if>
                     </@commonTag>
@@ -29,7 +29,7 @@
                     <@commonTag method="tags">
                         <#if categories?size gt 0>
                             <#list tags as tag>
-                                <li rel="tag"><a href="/tags/${tag.tagUrl}/">${tag.tagName}</a></li>
+                                <li rel="tag"><a href="${options.blog_url!}/tags/${tag.tagUrl}/">${tag.tagName}</a></li>
                             </#list>
                         </#if>
                     </@commonTag>
@@ -44,7 +44,7 @@
                     <ul>
                         <#list archive.posts?sort_by("postDate")?reverse as post>
                             <li>${post.postDate?string('MM月dd日')}：
-                                <a href="/archives/${post.postUrl}">${post.postTitle}</a>
+                                <a href="${options.blog_url!}/archives/${post.postUrl}">${post.postTitle}</a>
                             </li>
                         </#list>
                     </ul>
