@@ -1,0 +1,28 @@
+general:
+  label: 基本设置
+  items:
+    background:
+      name: background
+      label: 首页背景图
+      type: text
+    title:
+      name: title
+      label: 首页标题
+      type: textarea
+      default: '<span class="b">Y</span>
+                <span class="b">U</span>
+                <a href="/">
+                <span class="w">M</span>
+                </a>
+                <span class="b">O</span>
+                <span class="b">E</span>'
+    locale:
+      name: locale
+      label: 日期显示中/英文
+      type: radio
+      default: en
+      options:
+        - value: en
+          label: 英文
+        - value: zh
+          label: 中文

@@ -5,8 +5,8 @@
     <div class="container-fluid">
         <div class="row">
         <div class="col-12">
-            &copy; ${current?substring(0,4)} <a href="${options.blog_url?default('#')}">${options.blog_title?default('Story')}</a>.
-            Using <a target="_blank" href="https://github.com/ruibaby/halo">Halo</a> & <a target="_blank" href="https://yumoe.com/">Story</a>.
+            &copy; ${current?substring(0,4)} <a href="${options.blog_url!'#'}">${options.blog_title!'Story'}</a>.
+            Using <a target="_blank" href="https://github.com/halo-dev/halo">Halo</a> & <a target="_blank" href="https://yumoe.com/">Story</a>.
         </div>
         <div class="col-12">
             <@footer_info></@footer_info>
@@ -15,9 +15,9 @@
         </div>
     </div>
 </footer>
-<script src="//lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script>
-<script src="/${themeName}/assert/js/prism.js"></script>
-<script src="/${themeName}/assert/js/zoom-vanilla.min.js"></script>
+<script src="//cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/${theme.folderName}/assert/js/prism.js"></script>
+<script src="/${theme.folderName}/assert/js/zoom-vanilla.min.js"></script>
 <script>
     window.onload=function(){
         if (window.location.hash!='') {

@@ -1,9 +1,9 @@
 <#include "header.ftl">
-<@header title="${tag.tagName} - ${options.blog_title?default('Story')}" desc="${options.seo_desc?default('Story')}" keywords="${options.seo_keywords?default('Story')}"></@header>
+<@header title="${tag.name} - ${options.blog_title!'Story'}" desc="${options.seo_description!'Story'}" keywords="${options.seo_keywords!'Story'}"></@header>
 <div class="container-fluid">
     <div class="row">
         <div class="archive-header">
-            <span>- Tag · ${tag.tagName} -</span>
+            <span>- Tag · ${tag.name} -</span>
         </div>
     </div>
 </div>
@@ -15,11 +15,11 @@
                 <#if posts.content?size gt 0>
                 <#list posts.content as post>
                 <li class="post-item grid-item" itemscope itemtype="http://schema.org/BlogPosting">
-                    <a class="post-link" href="${options.blog_url!}/archives/${post.postUrl}">
-                        <h3 class="post-title"><time class="index-time" datetime="${post.postDate}" itemprop="datePublished">${post.postDate?string('MMM d,yyyy')}</time><br>${post.postTitle}</h3>
+                    <a class="post-link" href="${options.blog_url!}/archives/${post.url}">
+                        <h3 class="post-title"><time class="index-time" datetime="${post.createTime}" itemprop="datePublished">${post.createTime?string('MMM d,yyyy')}</time><br>${post.title}</h3>
                         <div class="post-meta">
                             <#if post.categories?? && post.categories?size gt 0>
-                                ${post.categories[0].cateName}
+                                ${post.categories[0].name}
                             </#if>
                         </div>
                     </a>
@@ -42,11 +42,11 @@
                     <#if posts.hasPrevious()>
                         <#if posts.number == 1>
                         <li class="prev">
-                            <a href="${options.blog_url!}/tags/${tag.tagUrl}/">&laquo;</a>
+                            <a href="${options.blog_url!}/tags/${tag.slugName}/">&laquo;</a>
                         </li>
                         <#else>
                         <li class="prev">
-                            <a href="${options.blog_url!}/tags/${tag.tagUrl}/page/${posts.number}/">&laquo;</a>
+                            <a href="${options.blog_url!}/tags/${tag.slugName}/page/${posts.number}/">&laquo;</a>
                         </li>
                         </#if>
                     </#if>
@@ -55,7 +55,7 @@
                     </li>
                     <#if posts.hasNext()>
                         <li class="next">
-                            <a href="${options.blog_url!}/tags/${tag.tagUrl}/page/${posts.number+2}">&raquo;</a>
+                            <a href="${options.blog_url!}/tags/${tag.slugName}/page/${posts.number+2}">&raquo;</a>
                         </li>
                     </#if>
                 </ol>

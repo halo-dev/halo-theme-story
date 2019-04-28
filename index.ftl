@@ -9,7 +9,7 @@
 	@link https://yumoe.com
 -->
 <#include "header.ftl">
-<@header title="${options.blog_title?default('Story')}" desc="${options.seo_desc?default('Story')}" keywords="${options.seo_keywords?default('Story')}"></@header>
+<@header title="${options.blog_title!'Story'}" desc="${options.seo_description!'Story'}" keywords="${options.seo_keywords!'Story'}"></@header>
 <div class="container-fluid">
     <div class="row">
 		<div id="main" role="main">
@@ -17,11 +17,11 @@
 				<#if posts??>
 					<#list posts.content as post>
 						<li class="post-item grid-item" itemscope itemtype="http://schema.org/BlogPosting">
-							<a class="post-link" href="${options.blog_url!}/archives/${post.postUrl}">
-								<h3 class="post-title"><time class="index-time" datetime="${post.postDate}" itemprop="datePublished">${post.postDate?string('MMM d,yyyy')}</time><br>${post.postTitle}</h3>
+							<a class="post-link" href="${options.blog_url!}/archives/${post.url}">
+								<h3 class="post-title"><time class="index-time" datetime="${post.createTime}" itemprop="datePublished">${post.createTime?string('MMM d,yyyy')}</time><br>${post.title}</h3>
 								<div class="post-meta">
 									<#if post.categories?? && post.categories?size gt 0>
-									${post.categories[0].cateName}
+									${post.categories[0].name}
 									</#if>
 								</div>
 							</a>

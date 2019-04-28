@@ -1,5 +1,5 @@
 <#include "../../common/macro/common_macro.ftl">
-<#if options.story_general_locale?default('en') == 'en'>
+<#if (settings.locale!'en') == 'en'>
     <#setting locale="en">
 </#if>
 <#macro header title,desc,keywords>
@@ -13,10 +13,10 @@
     <title>${title}</title>
 
     <!-- 使用url函数转换相关路径 -->
-    <link type="text/css" rel="stylesheet" href="//lib.baomitu.com/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
-    <link type="text/css" rel="stylesheet" href="/${themeName}/assert/css/prism.css">
-    <link type="text/css" rel="stylesheet" href="/${themeName}/assert/css/zoom.css">
-    <link type="text/css" rel="stylesheet" href="/${themeName}/assert/css/main.css">
+    <link type="text/css" rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="/${theme.folderName}/assert/css/prism.css">
+    <link type="text/css" rel="stylesheet" href="/${theme.folderName}/assert/css/zoom.css">
+    <link type="text/css" rel="stylesheet" href="/${theme.folderName}/assert/css/main.css">
     <@favicon></@favicon>
 
     <!--[if lt IE 9]>
@@ -29,18 +29,18 @@
     <meta name="keywords" content="${keywords}" />
     <meta name="generator" content="Halo" />
     <meta name="template" content="Story" />
-    <link rel="alternate" type="application/rss+xml" title="${options.blog_title}" href="${options.blog_url}/feed/" />
-    <link rel="alternate" type="application/atom+xml" title="${options.blog_title}" href="${options.blog_url}/atom/" />
+    <link rel="alternate" type="application/rss+xml" title="${options.blog_title}" href="${options.blog_url}/feed.xml" />
+    <link rel="alternate" type="application/atom+xml" title="${options.blog_title}" href="${options.blog_url}/atom.xml" />
     <!-- cPlayer Start -->
     <script>var cPlayers = [];var cPlayerOptions = [];</script>
     <!-- cPlayer End -->
-    <#if options.story_general_background??>
+    <#if settings.background??>
     <style>
         body{
             background: #fff;
         }
         body::before {
-            background: url('${options.story_general_background}') center/cover no-repeat;
+            background: url('${settings.background}') center/cover no-repeat;
         }
         blockquote::before {
             background: transparent !important;
@@ -58,7 +58,7 @@
     <div class="row">
         <div class="logo">
             <div class="header-logo">
-                ${options.story_general_title?default('<span class="b">Y</span><span class="b">U</span><a href="/"><span class="w">M</span></a><span class="b">O</span><span class="b">E</span>')}
+                ${setting.title!'<span class="b">Y</span><span class="b">U</span><a href="/"><span class="w">M</span></a><span class="b">O</span><span class="b">E</span>'}
                 <a id="btn-menu" href="javascript:isMenu();">
                     <span class="b">·</span>
                 </a>
@@ -73,11 +73,11 @@
                 </a>
             </div>
             <div id="menu-page">
-                <@commonTag method="menus">
-                    <#list menus?sort_by('menuSort') as menu>
-                        <a href="${menu.menuUrl}"><li>${menu.menuName}</li></a>
+                <@menuTag method="list">
+                    <#list menus?sort_by('priority') as menu>
+                        <a href="${menu.rrl}"><li>${menu.name}</li></a>
                     </#list>
-                </@commonTag>
+                </@menuTag>
             </div>
             <div id="search-box">
                 <form id="search" method="post" action="./" role="search">

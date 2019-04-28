@@ -4,7 +4,7 @@
 @package custom
 -->
 <#include "header.ftl">
-<@header title="Archive - ${options.blog_title?default('Story')}" desc="${options.seo_desc?default('Story')}" keywords="${options.seo_keywords?default('Story')}"></@header>
+<@header title="Archive - ${options.blog_title!'Story'}" desc="${options.seo_description!'Story'}" keywords="${options.seo_keywords!'Story'}"></@header>
 <div class="container-fluid">
     <div class="row">
         <div id="main" class="col-12 clearfix" role="main">
@@ -15,41 +15,41 @@
                     <!-- 分类 -->
                     <h4>Category</h4>
                     <ul>
-                    <@commonTag method="categories">
+                    <@categoryTag method="list">
                         <#if categories?size gt 0>
                             <#list categories as cate>
-                                <li rel="tag"><a href="${options.blog_url!}/categories/${cate.cateUrl}/">${cate.cateName}</a></li>
+                                <li rel="tag"><a href="${options.blog_url!}/categories/${cate.url}/">${cate.name}</a></li>
                             </#list>
                         </#if>
-                    </@commonTag>
+                    </@categoryTag>
                     </ul>
                     <!-- 标签 -->
                     <h4>Tag</h4>
                     <ul>
-                    <@commonTag method="tags">
+                    <@tagTag method="list">
                         <#if categories?size gt 0>
                             <#list tags as tag>
-                                <li rel="tag"><a href="${options.blog_url!}/tags/${tag.tagUrl}/">${tag.tagName}</a></li>
+                                <li rel="tag"><a href="${options.blog_url!}/tags/${tag.slugName}/">${tag.name}</a></li>
                             </#list>
                         </#if>
-                    </@commonTag>
+                    </@tagTag>
                     </ul>
                 </div>
 
                 <h3>Post</h3>
                 <div id="archives">
-                <@articleTag method="archivesLess">
-                    <#list archivesLess as archive>
+                <@postTag method="archiveYear">
+                    <#list archiveYear as archive>
                     <h4>${archive.year} 年</h4>
                     <ul>
-                        <#list archive.posts?sort_by("postDate")?reverse as post>
-                            <li>${post.postDate?string('MM月dd日')}：
-                                <a href="${options.blog_url!}/archives/${post.postUrl}">${post.postTitle}</a>
+                        <#list archive.posts?sort_by("createTime")?reverse as post>
+                            <li>${post.createTime?string('MM月dd日')}：
+                                <a href="${options.blog_url!}/archives/${post.url}">${post.title}</a>
                             </li>
                         </#list>
                     </ul>
                     </#list>
-                </@articleTag>
+                </@postTag>
                 </div>
             </article>
         </div>
