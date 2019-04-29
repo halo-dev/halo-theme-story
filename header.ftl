@@ -75,7 +75,7 @@
             <div id="menu-page">
                 <@menuTag method="list">
                     <#list menus?sort_by('priority') as menu>
-                        <a href="${menu.rrl}"><li>${menu.name}</li></a>
+                        <a href="${menu.url}"><li>${menu.name}</li></a>
                     </#list>
                 </@menuTag>
             </div>

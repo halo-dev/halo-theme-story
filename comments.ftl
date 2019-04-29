@@ -1,5 +1,5 @@
 <div id="comments" class="gen">
     <#if !post.disallowComment>
-        <#include "/common/comment/omment.ftl">
+        <#include "/common/comment/comment.ftl">
     </#if>
 </div>

@@ -1,5 +1,5 @@
 <#include "header.ftl">
-<@header title="${post.title!} - ${options.blog_title!'Story'}" desc="${post.summary!}" keywords="${options.seo_keywords!'Story'},${tagWords}"></@header>
+<@header title="${post.title!} - ${options.blog_title!'Story'}" desc="${post.summary!}" keywords="${options.seo_keywords!'Story'},${tagWords!}"></@header>
 <div class="container-fluid">
     <div class="row">
         <div id="main" class="col-12 clearfix" role="main">

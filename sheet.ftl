@@ -1,12 +1,12 @@
 <#include "header.ftl">
-<@header title="${post.title} - ${options.blog_title!'Story'}" desc="${options.seo_description!'Story'}" keywords="${options.seo_keywords!'Story'}"></@header>
+<@header title="${sheet.title} - ${options.blog_title!'Story'}" desc="${options.seo_description!'Story'}" keywords="${options.seo_keywords!'Story'}"></@header>
 <div class="container-fluid">
     <div class="row">
         <div id="main" class="col-12 clearfix" role="main">
             <article class="posti" itemscope itemtype="http://schema.org/BlogPosting">
-                <h1 style="text-align:right;" class="post-title" itemprop="name headline">${post.title}</h1>
+                <h1 style="text-align:right;" class="post-title" itemprop="name headline">${sheet.title}</h1>
                 <div class="post-content" itemprop="articleBody">
-                    ${post.formatContent!}
+                    ${sheet.formatContent!}
                 </div>
                 <div style="display:block;" class="clearfix">
                     <section style="float:right;">

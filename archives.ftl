@@ -39,7 +39,7 @@
                 <h3>Post</h3>
                 <div id="archives">
                 <@postTag method="archiveYear">
-                    <#list archiveYear as archive>
+                    <#list archives as archive>
                     <h4>${archive.year} 年</h4>
                     <ul>
                         <#list archive.posts?sort_by("createTime")?reverse as post>
