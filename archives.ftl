@@ -18,7 +18,7 @@
                     <@categoryTag method="list">
                         <#if categories?size gt 0>
                             <#list categories as cate>
-                                <li rel="tag"><a href="${options.blog_url!}/categories/${cate.url}/">${cate.name}</a></li>
+                                <li rel="tag"><a href="${options.blog_url!}/categories/${cate.slugName}/">${cate.name}</a></li>
                             </#list>
                         </#if>
                     </@categoryTag>

@@ -6,7 +6,7 @@
             <article class="posti" itemscope itemtype="http://schema.org/BlogPosting">
                 <h1 class="post-title" itemprop="name headline">${post.title}</h1>
                 <div class="post-meta">
-                    <p>Written by <a itemprop="name" href="${options.blog_url!'#'}" rel="author">${user.nickName!}</a> with ♥ on <time datetime="${post.createTime}" itemprop="datePublished">${post.createTime?string('MMM d,yyyy')}</time><#if categories?size gt 0> in <#list categories as cate><a href="/categories/${cate.url}">${cate.name}</a></#list></#if></p>
+                    <p>Written by <a itemprop="name" href="${options.blog_url!'#'}" rel="author">${user.nickName!}</a> with ♥ on <time datetime="${post.createTime}" itemprop="datePublished">${post.createTime?string('MMM d,yyyy')}</time><#if categories?size gt 0> in <#list categories as cate><a href="/categories/${cate.slugName}">${cate.name}</a></#list></#if></p>
                 </div>
 
                 <div class="post-content" itemprop="articleBody">

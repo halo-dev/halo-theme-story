@@ -58,7 +58,7 @@
     <div class="row">
         <div class="logo">
             <div class="header-logo">
-                ${setting.title!'<span class="b">Y</span><span class="b">U</span><a href="/"><span class="w">M</span></a><span class="b">O</span><span class="b">E</span>'}
+                ${settings.title!'<span class="b">Y</span><span class="b">U</span><a href="/"><span class="w">M</span></a><span class="b">O</span><span class="b">E</span>'}
                 <a id="btn-menu" href="javascript:isMenu();">
                     <span class="b">·</span>
                 </a>
