@@ -15,6 +15,7 @@
                     </section>
                 </div>
                 <#include "comments.ftl">
+                <@comment post=sheet type="sheet" />
             </article>
         </div>
     </div>

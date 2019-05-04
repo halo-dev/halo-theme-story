@@ -1,4 +1,4 @@
-<#include "../../common/macro/common_macro.ftl">
+<#include "/common/macro/common_macro.ftl">
 <#if (settings.locale!'en') == 'en'>
     <#setting locale="en">
 </#if>
@@ -17,7 +17,7 @@
     <link type="text/css" rel="stylesheet" href="/${theme.folderName}/assert/css/prism.css">
     <link type="text/css" rel="stylesheet" href="/${theme.folderName}/assert/css/zoom.css">
     <link type="text/css" rel="stylesheet" href="/${theme.folderName}/assert/css/main.css">
-    <@favicon></@favicon>
+    <@globalHeader />
 
     <!--[if lt IE 9]>
     <script src="//cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>

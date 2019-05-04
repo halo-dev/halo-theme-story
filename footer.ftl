@@ -1,5 +1,5 @@
 </div><!-- end #body -->
-<#include "../../common/macro/common_macro.ftl">
+<#include "/common/macro/common_macro.ftl">
 <#assign current="${.now}">
 <footer id="footer" role="contentinfo">
     <div class="container-fluid">
@@ -9,8 +9,7 @@
             Using <a target="_blank" href="https://github.com/halo-dev/halo">Halo</a> & <a target="_blank" href="https://yumoe.com/">Story</a>.
         </div>
         <div class="col-12">
-            <@footer_info></@footer_info>
-            <@statistics></@statistics>
+            <@globalFooter />
         </div>
         </div>
     </div>

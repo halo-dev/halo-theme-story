@@ -25,6 +25,7 @@
                     </section>
                 </div>
                 <#include "comments.ftl">
+                <@comment post=post type="post" />
             </article>
         </div>
     </div>
