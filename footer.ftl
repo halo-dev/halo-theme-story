@@ -1,11 +1,10 @@
 </div><!-- end #body -->
 <#include "/common/macro/common_macro.ftl">
-<#assign current="${.now}">
 <footer id="footer" role="contentinfo">
     <div class="container-fluid">
         <div class="row">
         <div class="col-12">
-            &copy; ${current?substring(0,4)} <a href="${options.blog_url!'#'}">${options.blog_title!'Story'}</a>.
+            &copy; ${.now?string('yyyy')} <a href="${options.blog_url!'#'}">${options.blog_title!'Story'}</a>.
             Using <a target="_blank" href="https://github.com/halo-dev/halo">Halo</a> & <a target="_blank" href="https://yumoe.com/">Story</a>.
         </div>
         <div class="col-12">
