@@ -29,8 +29,8 @@
     <meta name="keywords" content="${keywords}" />
     <meta name="generator" content="Halo" />
     <meta name="template" content="Story" />
-    <link rel="alternate" type="application/rss+xml" title="${options.blog_title}" href="${options.blog_url}/feed.xml" />
-    <link rel="alternate" type="application/atom+xml" title="${options.blog_title}" href="${options.blog_url}/atom.xml" />
+    <link rel="alternate" type="application/rss+xml" title="${options.blog_title!}" href="${options.blog_url!}/feed.xml" />
+    <link rel="alternate" type="application/atom+xml" title="${options.blog_title!}" href="${options.blog_url!}/atom.xml" />
     <!-- cPlayer Start -->
     <script>var cPlayers = [];var cPlayerOptions = [];</script>
     <!-- cPlayer End -->
