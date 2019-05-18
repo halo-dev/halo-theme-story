@@ -16,7 +16,7 @@
                 <div style="display:block;" class="clearfix">
                     <section style="float:left;">
                         <span itemprop="keywords" class="tags">
-                            tag(s): <#if tags?size gt 0><#list tags as tag><a href="${options.blog_url!}/tags/${tag.slugName}">${tag.name}</a>&nbsp;</#list></#if>
+                            tag(s): <#if tags?size gt 0><#list tags as tag><a href="${ctx!}/tags/${tag.slugName}">${tag.name}</a>&nbsp;</#list></#if>
                         </span>
                     </section>
                     <section style="float:right;">

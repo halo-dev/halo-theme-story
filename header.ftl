@@ -14,9 +14,9 @@
 
     <!-- 使用url函数转换相关路径 -->
     <link type="text/css" rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
-    <link type="text/css" rel="stylesheet" href="/${theme.folderName}/assert/css/prism.css">
-    <link type="text/css" rel="stylesheet" href="/${theme.folderName}/assert/css/zoom.css">
-    <link type="text/css" rel="stylesheet" href="/${theme.folderName}/assert/css/main.css">
+    <link type="text/css" rel="stylesheet" href="/${static!}/assert/css/prism.css">
+    <link type="text/css" rel="stylesheet" href="/${static!}/assert/css/zoom.css">
+    <link type="text/css" rel="stylesheet" href="/${static!}/assert/css/main.css">
     <@globalHeader />
 
     <!--[if lt IE 9]>
@@ -29,8 +29,8 @@
     <meta name="keywords" content="${keywords}" />
     <meta name="generator" content="Halo" />
     <meta name="template" content="Story" />
-    <link rel="alternate" type="application/rss+xml" title="${options.blog_title!}" href="${options.blog_url!}/feed.xml" />
-    <link rel="alternate" type="application/atom+xml" title="${options.blog_title!}" href="${options.blog_url!}/atom.xml" />
+    <link rel="alternate" type="application/rss+xml" title="${options.blog_title!}" href="${ctx!}/feed.xml" />
+    <link rel="alternate" type="application/atom+xml" title="${options.blog_title!}" href="${ctx!}/atom.xml" />
     <!-- cPlayer Start -->
     <script>var cPlayers = [];var cPlayerOptions = [];</script>
     <!-- cPlayer End -->

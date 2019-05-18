@@ -17,7 +17,7 @@
 				<#if posts??>
 					<#list posts.content as post>
 						<li class="post-item grid-item" itemscope itemtype="http://schema.org/BlogPosting">
-							<a class="post-link" href="${options.blog_url!}/archives/${post.url}">
+							<a class="post-link" href="${ctx!}/archives/${post.url}">
 								<h3 class="post-title"><time class="index-time" datetime="${post.createTime}" itemprop="datePublished">${post.createTime?string('MMM d,yyyy')}</time><br>${post.title}</h3>
 								<div class="post-meta">
 									<#if post.categories?? && post.categories?size gt 0>
@@ -41,11 +41,11 @@
 				<#if posts.hasPrevious()>
 					<#if posts.number == 1>
 					<li class="prev">
-						<a href="${options.blog_url!}/">&laquo;</a>
+						<a href="${ctx!}/">&laquo;</a>
 					</li>
 					<#else>
 					<li class="prev">
-						<a href="${options.blog_url!}/page/${posts.number}/">&laquo;</a>
+						<a href="${ctx!}/page/${posts.number}/">&laquo;</a>
 					</li>
 					</#if>
 				</#if>
@@ -54,7 +54,7 @@
 				</li>
 				<#if posts.hasNext()>
 					<li class="next">
-						<a href="${options.blog_url!}/page/${posts.number+2}">&raquo;</a>
+						<a href="${ctx!}/page/${posts.number+2}">&raquo;</a>
 					</li>
 				</#if>
 			</ol>

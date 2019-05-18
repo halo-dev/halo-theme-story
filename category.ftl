@@ -40,11 +40,11 @@
                     <#if posts.hasPrevious()>
                         <#if posts.number == 1>
                         <li class="prev">
-                            <a href="${options.blog_url!}/categories/${category.url}/">&laquo;</a>
+                            <a href="${ctx!}/categories/${category.url}/">&laquo;</a>
                         </li>
                         <#else>
                         <li class="prev">
-                            <a href="${options.blog_url!}/categories/${category.url}/page/${posts.number}/">&laquo;</a>
+                            <a href="${ctx!}/categories/${category.url}/page/${posts.number}/">&laquo;</a>
                         </li>
                         </#if>
                     </#if>
@@ -53,7 +53,7 @@
                     </li>
                     <#if posts.hasNext()>
                         <li class="next">
-                            <a href="${options.blog_url!}/categories/${category.url}/page/${posts.number+2}">&raquo;</a>
+                            <a href="${ctx!}/categories/${category.url}/page/${posts.number+2}">&raquo;</a>
                         </li>
                     </#if>
                 </ol>
