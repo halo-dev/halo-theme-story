@@ -14,8 +14,8 @@
     </div>
 </footer>
 <script src="//cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="/${static!}/assert/js/prism.js"></script>
-<script src="/${static!}/assert/js/zoom-vanilla.min.js"></script>
+<script src="${static!}/assert/js/prism.js"></script>
+<script src="${static!}/assert/js/zoom-vanilla.min.js"></script>
 <script>
     window.onload=function(){
         if (window.location.hash!='') {

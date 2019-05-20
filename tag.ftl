@@ -15,7 +15,7 @@
                 <#if posts.content?size gt 0>
                 <#list posts.content as post>
                 <li class="post-item grid-item" itemscope itemtype="http://schema.org/BlogPosting">
-                    <a class="post-link" href="${ctx!}/archives/${post.url}">
+                    <a class="post-link" href="${context!}/archives/${post.url}">
                         <h3 class="post-title"><time class="index-time" datetime="${post.createTime}" itemprop="datePublished">${post.createTime?string('MMM d,yyyy')}</time><br>${post.title}</h3>
                         <div class="post-meta">
                             <#if post.categories?? && post.categories?size gt 0>
@@ -42,11 +42,11 @@
                     <#if posts.hasPrevious()>
                         <#if posts.number == 1>
                         <li class="prev">
-                            <a href="${ctx!}/tags/${tag.slugName}/">&laquo;</a>
+                            <a href="${context!}/tags/${tag.slugName}/">&laquo;</a>
                         </li>
                         <#else>
                         <li class="prev">
-                            <a href="${ctx!}/tags/${tag.slugName}/page/${posts.number}/">&laquo;</a>
+                            <a href="${context!}/tags/${tag.slugName}/page/${posts.number}/">&laquo;</a>
                         </li>
                         </#if>
                     </#if>
@@ -55,7 +55,7 @@
                     </li>
                     <#if posts.hasNext()>
                         <li class="next">
-                            <a href="${ctx!}/tags/${tag.slugName}/page/${posts.number+2}">&raquo;</a>
+                            <a href="${context!}/tags/${tag.slugName}/page/${posts.number+2}">&raquo;</a>
                         </li>
                     </#if>
                 </ol>
