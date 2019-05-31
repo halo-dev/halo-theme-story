@@ -80,8 +80,8 @@
                 </@menuTag>
             </div>
             <div id="search-box">
-                <form id="search" method="post" action="./" role="search">
-                    <input autocomplete="off" type="text" name="s" id="menu-search" placeholder="Type something~" />
+                <form id="search" method="post" action="/search" role="search">
+                    <input autocomplete="off" type="text" name="keyword" id="menu-search" placeholder="Type something~" />
                 </form>
             </div>
         </div>
