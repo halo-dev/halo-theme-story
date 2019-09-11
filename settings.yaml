@@ -4,7 +4,7 @@ general:
     background:
       name: background
       label: 首页背景图
-      type: text
+      type: attachment
     title:
       name: title
       label: 首页标题
