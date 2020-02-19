@@ -5,7 +5,7 @@
         <div class="row">
         <div class="col-12">
             &copy; ${.now?string('yyyy')} <a href="${options.blog_url!'#'}">${options.blog_title!'Story'}</a>.
-            Using <a target="_blank" href="https://github.com/halo-dev/halo">Halo</a> & <a target="_blank" href="https://yumoe.com/">Story</a>.
+            Using <a target="_blank" href="https://halo.run">Halo</a> & <a target="_blank" href="https://yumoe.com/">Story</a>.
         </div>
         <div class="col-12">
             <@globalFooter />
