@@ -1,8 +1,7 @@
-<#include "/common/macro/common_macro.ftl">
 <#if (settings.locale!'en') == 'en'>
     <#setting locale="en">
 </#if>
-<#macro header title,desc,keywords>
+<#macro header title>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -14,10 +13,10 @@
 
     <!-- 使用url函数转换相关路径 -->
     <link type="text/css" rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
-    <link type="text/css" rel="stylesheet" href="${static!}/assert/css/prism.css">
-    <link type="text/css" rel="stylesheet" href="${static!}/assert/css/zoom.css">
-    <link type="text/css" rel="stylesheet" href="${static!}/assert/css/main.css">
-    <@globalHeader />
+    <link type="text/css" rel="stylesheet" href="${theme_base!}/assert/css/prism.css">
+    <link type="text/css" rel="stylesheet" href="${theme_base!}/assert/css/zoom.css">
+    <link type="text/css" rel="stylesheet" href="${theme_base!}/assert/css/main.css">
+    <@global.head />
 
     <!--[if lt IE 9]>
     <script src="//cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
@@ -25,12 +24,12 @@
     <![endif]-->
 
     <!-- 通过自有函数输出HTML头部信息 -->
-    <meta name="description" content="${desc}" />
-    <meta name="keywords" content="${keywords}" />
+    <meta name="description" content="${meta_description!}" />
+    <meta name="keywords" content="${meta_keywords!}" />
     <meta name="generator" content="Halo" />
     <meta name="template" content="Story" />
-    <link rel="alternate" type="application/rss+xml" title="${options.blog_title!}" href="${context!}/feed.xml" />
-    <link rel="alternate" type="application/atom+xml" title="${options.blog_title!}" href="${context!}/atom.xml" />
+    <link rel="alternate" type="application/rss+xml" title="${blog_title!}" href="${rss_url!}" />
+    <link rel="alternate" type="application/atom+xml" title="${blog_title!}" href="${atom_url!}" />
     <!-- cPlayer Start -->
     <script>var cPlayers = [];var cPlayerOptions = [];</script>
     <!-- cPlayer End -->
@@ -75,7 +74,7 @@
             <div id="menu-page">
                 <@menuTag method="list">
                     <#list menus?sort_by('priority') as menu>
-                        <a href="${menu.url}"><li>${menu.name}</li></a>
+                        <a href="${menu.url}" target="${menu.target!}"><li>${menu.name}</li></a>
                     </#list>
                 </@menuTag>
             </div>
