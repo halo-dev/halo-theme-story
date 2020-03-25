@@ -1,21 +1,20 @@
 </div><!-- end #body -->
-<#include "/common/macro/common_macro.ftl">
 <footer id="footer" role="contentinfo">
     <div class="container-fluid">
         <div class="row">
         <div class="col-12">
-            &copy; ${.now?string('yyyy')} <a href="${options.blog_url!'#'}">${options.blog_title!'Story'}</a>.
+            &copy; ${.now?string('yyyy')} <a href="${blog_url!}">${blog_title!}</a>.
             Using <a target="_blank" href="https://halo.run">Halo</a> & <a target="_blank" href="https://yumoe.com/">Story</a>.
         </div>
         <div class="col-12">
-            <@globalFooter />
+            <@global.footer />
         </div>
         </div>
     </div>
 </footer>
 <script src="//cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="${static!}/assert/js/prism.js"></script>
-<script src="${static!}/assert/js/zoom-vanilla.min.js"></script>
+<script src="${theme_base!}/assert/js/prism.js"></script>
+<script src="${theme_base!}/assert/js/zoom-vanilla.min.js"></script>
 <script>
     window.onload=function(){
         if (window.location.hash!='') {

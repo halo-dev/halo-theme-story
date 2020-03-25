@@ -1,5 +1,5 @@
 <#include "header.ftl">
-<@header title="${category.name} - ${options.blog_title!'Story'}" desc="${options.seo_description!'Story'}" keywords="${options.seo_keywords!'Story'}"></@header>
+<@header title="${category.name} - ${blog_title!}"></@header>
 <div class="container-fluid">
     <div class="row">
         <div class="archive-header">
@@ -15,8 +15,8 @@
                 <#if posts.content?size gt 0>
                 <#list posts.content as post>
                 <li class="post-item grid-item" itemscope itemtype="http://schema.org/BlogPosting">
-                    <a class="post-link" href="/archives/${post.url}">
-                        <h3 class="post-title"><time class="index-time" datetime="${post.createTime}" itemprop="datePublished">${post.createTime?string('MMM d,yyyy')}</time><br>${post.title}</h3>
+                    <a class="post-link" href="${post.fullPath!}">
+                        <h3 class="post-title"><time class="index-time" datetime="${post.createTime}" itemprop="datePublished">${post.createTime?string('MMM d,yyyy')}</time><br>${post.title!}</h3>
                         <div class="post-meta">
                             ${category.name}
                         </div>
@@ -37,25 +37,21 @@
         <#if posts.totalPages gt 1>
             <div class="nav-page">
                 <ol class="page-navigator">
-                    <#if posts.hasPrevious()>
-                        <#if posts.number == 1>
-                        <li class="prev">
-                            <a href="${context!}/categories/${category.url}/">&laquo;</a>
-                        </li>
-                        <#else>
-                        <li class="prev">
-                            <a href="${context!}/categories/${category.url}/page/${posts.number}/">&laquo;</a>
-                        </li>
+                    <@paginationTag method="categoryPosts" page="${posts.number}" total="${posts.totalPages}" display="3" slug="${category.slug!}">
+                        <#if pagination.hasPrev>
+                            <li class="prev">
+                                <a href="${pagination.prevPageFullPath!}">&laquo;</a>
+                            </li>
                         </#if>
-                    </#if>
-                    <li>
-                        <a href="#">${posts.number+1}</a>
-                    </li>
-                    <#if posts.hasNext()>
-                        <li class="next">
-                            <a href="${context!}/categories/${category.url}/page/${posts.number+2}">&raquo;</a>
+                        <li>
+                            <a href="#">${posts.number+1}</a>
                         </li>
-                    </#if>
+                        <#if pagination.hasNext>
+                            <li class="next">
+                                <a href="${pagination.nextPageFullPath!}">&raquo;</a>
+                            </li>
+                        </#if>
+                    </@paginationTag>
                 </ol>
             </div>
         </#if>

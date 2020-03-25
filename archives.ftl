@@ -4,7 +4,7 @@
 @package custom
 -->
 <#include "header.ftl">
-<@header title="Archive - ${options.blog_title!'Story'}" desc="${options.seo_description!'Story'}" keywords="${options.seo_keywords!'Story'}"></@header>
+<@header title="Archive - ${blog_title!}"></@header>
 <div class="container-fluid">
     <div class="row">
         <div id="main" class="col-12 clearfix" role="main">
@@ -17,8 +17,8 @@
                     <ul>
                     <@categoryTag method="list">
                         <#if categories?size gt 0>
-                            <#list categories as cate>
-                                <li rel="tag"><a href="${context!}/categories/${cate.slugName}/">${cate.name}</a></li>
+                            <#list categories as category>
+                                <li rel="tag"><a href="${category.fullPath!}">${category.name}</a></li>
                             </#list>
                         </#if>
                     </@categoryTag>
@@ -29,7 +29,7 @@
                     <@tagTag method="list">
                         <#if categories?size gt 0>
                             <#list tags as tag>
-                                <li rel="tag"><a href="${context!}/tags/${tag.slugName}/">${tag.name}</a></li>
+                                <li rel="tag"><a href="${tag.fullPath!}">${tag.name}</a></li>
                             </#list>
                         </#if>
                     </@tagTag>
@@ -44,7 +44,7 @@
                     <ul>
                         <#list archive.posts?sort_by("createTime")?reverse as post>
                             <li>${post.createTime?string('MM月dd日')}：
-                                <a href="${context!}/archives/${post.url}">${post.title}</a>
+                                <a href="${post.fullPath!}">${post.title!}</a>
                             </li>
                         </#list>
                     </ul>

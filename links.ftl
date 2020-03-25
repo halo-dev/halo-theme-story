@@ -1,5 +1,5 @@
 <#include "header.ftl">
-<@header title="友情链接 - ${options.blog_title!'Story'}" desc="${options.seo_description!'Story'}" keywords="${options.seo_keywords!'Story'}"></@header>
+<@header title="友情链接 - ${blog_title!}" ></@header>
 <div class="container-fluid">
     <div class="row">
         <div id="main" class="col-12 clearfix" role="main">
