@@ -11,7 +11,7 @@
                 <div style="display:block;" class="clearfix">
                     <section style="float:right;">
                         <span><a id="btn-comments" href="javascript:isComments();">show comments</a></span> · <span><a href="javascript:goBack();">back</a></span> ·
-                        <span><a href="${options.blog_url!'#'}">home</a></span>
+                        <span><a href="${blog_url!}">home</a></span>
                     </section>
                 </div>
                 <#include "comments.ftl">

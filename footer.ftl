@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <div class="row">
         <div class="col-12">
-            &copy; ${.now?string('yyyy')} <a href="${options.blog_url!'#'}">${options.blog_title!'Story'}</a>.
+            &copy; ${.now?string('yyyy')} <a href="${blog_url!}">${blog_title!}</a>.
             Using <a target="_blank" href="https://halo.run">Halo</a> & <a target="_blank" href="https://yumoe.com/">Story</a>.
         </div>
         <div class="col-12">

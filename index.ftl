@@ -9,7 +9,7 @@
 	@link https://yumoe.com
 -->
 <#include "header.ftl">
-<@header title="${options.blog_title!'Story'}"></@header>
+<@header title="${blog_title!}"></@header>
 <div class="container-fluid">
     <div class="row">
 		<div id="main" role="main">

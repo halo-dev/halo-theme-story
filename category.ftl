@@ -1,5 +1,5 @@
 <#include "header.ftl">
-<@header title="${category.name} - ${options.blog_title!'Story'}"></@header>
+<@header title="${category.name} - ${blog_title!}"></@header>
 <div class="container-fluid">
     <div class="row">
         <div class="archive-header">

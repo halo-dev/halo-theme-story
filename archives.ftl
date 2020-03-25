@@ -4,7 +4,7 @@
 @package custom
 -->
 <#include "header.ftl">
-<@header title="Archive - ${options.blog_title!'Story'}"></@header>
+<@header title="Archive - ${blog_title!}"></@header>
 <div class="container-fluid">
     <div class="row">
         <div id="main" class="col-12 clearfix" role="main">
